@@ -291,6 +291,7 @@ MonoBehaviour:
   jright: 0
   Dmag: 0
   Dvec: {x: 0, y: 0, z: 0}
+  cmrfov: 0
   inputEnabled: 1
   run: 0
   onRun: 0
@@ -3343,6 +3344,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1594245439631756454}
     m_Modifications:
+    - target: {fileID: 151943229261832795, guid: 6d7daedef2a95194692237e63e4742ed,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3750066913663777068, guid: 6d7daedef2a95194692237e63e4742ed,
         type: 3}
       propertyPath: m_LocalPosition.x

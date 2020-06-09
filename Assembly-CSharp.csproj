@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{138696CB-33BB-760D-6562-29E1B62C9B78}</ProjectGuid>
+    <ProjectGuid>{5EBE5012-B1D9-0121-1F69-4A119F56F9A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\FSMOnEnter.cs" />
      <Compile Include="Assets\Scripts\FSMOnExit.cs" />
      <Compile Include="Assets\Scripts\FSMOnUpdate.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\IActorManagerInterface.cs" />
      <Compile Include="Assets\Scripts\IUserInput.cs" />
      <Compile Include="Assets\Scripts\InteractionManager.cs" />
@@ -108,24 +109,29 @@
      <Compile Include="Assets\Scripts\KeyboardInput.cs" />
      <Compile Include="Assets\Scripts\OnGroundSensor.cs" />
      <Compile Include="Assets\Scripts\RootMotionControl.cs" />
+     <Compile Include="Assets\Scripts\Single.cs" />
+     <Compile Include="Assets\Scripts\SingleMono.cs" />
      <Compile Include="Assets\Scripts\StateManager.cs" />
      <Compile Include="Assets\Scripts\TransformHelpers.cs" />
      <Compile Include="Assets\Scripts\TriggerControl.cs" />
+     <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\WeaponController.cs" />
      <Compile Include="Assets\Scripts\WeaponData.cs" />
      <Compile Include="Assets\Scripts\WeaponManager.cs" />
      <Compile Include="Assets\Simple Health Bar\Scripts\SimpleHealthBar.cs" />
      <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\AsteroidController.cs" />
-     <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\GameManager.cs" />
      <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\HealthPickupController.cs" />
      <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Suriyun\Scripts\AnimatorController.cs" />
      <Compile Include="Assets\Suriyun\Scripts\Swapper.cs" />
+     <Compile Include="Assets\UGUIKit Flat\Content\Scripts\bl_ProgressBar.cs" />
+     <Compile Include="Assets\UGUIKit Flat\Content\Scripts\bl_ToggleSwitcher.cs" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\Simple Health Bar\README.txt" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\CharaOutline.cginc" />
+     <None Include="Assets\UGUIKit Flat\ReadMe.txt" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
      <None Include="Assets\Frank_Warrior\Documentation\Frank_Warrior_Motion_List.txt" />
@@ -142,31 +148,31 @@
      <None Include="Assets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>F:/unity/work/Third-person control - Copy/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>F:/unity/work/Third-person control - Copy/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>F:/unity/work/Third-person control - Copy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>F:/unity/work/Third-person control - Copy/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>F:/unity/work/Third-person control - Copy/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>F:/unity/work/Third-person control - Copy/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>F:/unity/work/Third-person control - Copy/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>F:/unity/work/Third-person control - Copy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>F:/unity/work/Third-person control - Copy/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

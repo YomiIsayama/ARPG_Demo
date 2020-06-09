@@ -34,7 +34,6 @@ public class StateManager : IActorManagerInterface
 
     void Start()
     {
-        PlayerHandle = GameObject.FindGameObjectWithTag("Player");
         HP = HPMax;
     }
 
@@ -72,7 +71,7 @@ public class StateManager : IActorManagerInterface
         uiHPBar.fillAmount = HP / HPMax;
         if(am.ac.camcon.isAI)
         {
-            uiHPBar.transform.LookAt(PlayerHandle.transform);
+            uiHPBar.transform.LookAt(Camera.main.transform);
         }
     }
 

@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using SingleInstance;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActorController : MonoBehaviour
+public class ActorController : SingleMono<ActorController>
 {
     public GameObject model;
     public CameraController camcon;

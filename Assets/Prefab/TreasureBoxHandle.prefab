@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 1914316749241041512}
   - component: {fileID: 1914316749241041513}
   - component: {fileID: 1914316749241041518}
+  - component: {fileID: 2032098990}
   m_Layer: 0
   m_Name: TreasureBoxHandle
   m_TagString: Untagged
@@ -236,6 +237,7 @@ MonoBehaviour:
   jright: 0
   Dmag: 0
   Dvec: {x: 0, y: 0, z: 0}
+  cmrfov: 0
   inputEnabled: 1
   run: 0
   onRun: 0
@@ -251,6 +253,39 @@ MonoBehaviour:
   lastlt: 0
   roll: 0
   jab: 0
+--- !u!114 &2032098990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914316749241041506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c93c6ad15a7bd2343bd636605e3dc12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  am: {fileID: 0}
+  HP: 15
+  HPMax: 15
+  ATK: 10
+  uiHPBar: {fileID: 0}
+  isGround: 0
+  isJump: 0
+  isFall: 0
+  isJab: 0
+  isAttack: 0
+  isRoll: 0
+  isHit: 0
+  isDie: 0
+  isBlocked: 0
+  isDefense: 0
+  isCounterBack: 0
+  isCounterBackEnable: 0
+  isAllowDefense: 0
+  isImmortal: 0
+  isCounterBackSuccess: 0
+  isCounterBackFailure: 0
 --- !u!1001 &1914316749624451667
 PrefabInstance:
   m_ObjectHideFlags: 0

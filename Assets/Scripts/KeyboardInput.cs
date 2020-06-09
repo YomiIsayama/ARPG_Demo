@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SingleInstance;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +20,8 @@ public class KeyboardInput : IUserInput
     public string keyJab;
     public string keyLT;
     public string keyRT;
+    public string keyEsc;
+    public string keyOpenBag;
 
     [Header("===== Mouse settings =====")]
     public bool mouseEnable = false;
@@ -34,7 +37,8 @@ public class KeyboardInput : IUserInput
     // Start is called before the first frame update
     void Start()
     {
-        
+        esc = false;
+        isOpen = false;
     }
 
     // Update is called once per frame
@@ -44,6 +48,8 @@ public class KeyboardInput : IUserInput
         inputEnabledUpdate();
         inputRun();
         inputAct();
+        inputEsc();
+        inputOpenBag();
     }
 
     private void mouseInputUpdate()
@@ -97,6 +103,21 @@ public class KeyboardInput : IUserInput
         {
             run = false;
             onRun = false;
+        }
+    }
+
+    void inputEsc()
+    {
+        if (Input.GetKeyDown(keyEsc))
+        {
+            esc = !esc;
+        }
+    }
+    void inputOpenBag()
+    {
+        if(Input.GetKeyDown(keyOpenBag))
+        {
+            isOpen = !isOpen;
         }
     }
     private void inputAct()

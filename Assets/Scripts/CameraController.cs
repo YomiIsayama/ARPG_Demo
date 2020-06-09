@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SingleInstance;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class CameraController : MonoBehaviour
     public float horizontalSpeed = 100.0f;
     public float verticalSpeed = 100.0f;
     public Image lockDot;
+    public GameObject bag;
 
     public bool lockState;
     public bool isAI = false;
@@ -22,6 +24,7 @@ public class CameraController : MonoBehaviour
     private float tempEulerx;
 
     // Start is called before the first frame update
+    [System.Obsolete]
     void Start()
     {
         CameraHandle = transform.parent.gameObject;
@@ -34,10 +37,7 @@ public class CameraController : MonoBehaviour
         if (!isAI)
         {
             camera = Camera.main.gameObject;
-            //lockDot.enabled = false;
-
-            //Hide mouse
-            Cursor.lockState = CursorLockMode.Locked;
+            lockDot.enabled = false;
         }
     }
     void FixedUpdate()
@@ -95,6 +95,18 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isAI)
+        {
+            //Hide mouse
+            if (bag.activeInHierarchy == true)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+        }
         if (lockTarget != null)
         {
             if (!isAI)
