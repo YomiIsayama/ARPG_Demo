@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 1000559382
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui/slot.ab
+      Dependencies: {}
+    Info_1:
+      Name: character/enemyybot.ab
+      Dependencies: {}

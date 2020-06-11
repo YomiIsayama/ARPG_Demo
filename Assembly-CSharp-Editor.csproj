@@ -62,6 +62,7 @@
      <Compile Include="Assets\DefaultPlayables\TimeDilation\Editor\TimeDilationDrawer.cs" />
      <Compile Include="Assets\DefaultPlayables\TransformTween\Editor\TransformTweenDrawer.cs" />
      <Compile Include="Assets\MySuperPlayable\Editor\MySuperPlayableDrawer.cs" />
+     <Compile Include="Assets\Scripts\Editor\CreateAssetBundles.cs" />
      <Compile Include="Assets\Simple Health Bar\Editor\SimpleHealthBarEditor.cs" />
      <Compile Include="Assets\Simple Health Bar\Editor\SimpleHealthBarWindow.cs" />
  <Reference Include="UnityEditor.TestRunner">

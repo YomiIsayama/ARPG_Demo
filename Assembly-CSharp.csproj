@@ -85,6 +85,11 @@
      <Compile Include="Assets\DefaultPlayables\Video\VideoScriptPlayableTrack.cs" />
      <Compile Include="Assets\Dynamic Sword Animset\Scripts\Animation_view.cs" />
      <Compile Include="Assets\Dynamic Sword Animset\Scripts\Blue_CameraControll.cs" />
+     <Compile Include="Assets\Inventory\InventoryScripts\Inventory.cs" />
+     <Compile Include="Assets\Inventory\InventoryScripts\InventoryManager.cs" />
+     <Compile Include="Assets\Inventory\InventoryScripts\Item.cs" />
+     <Compile Include="Assets\Inventory\InventoryScripts\ItemOnWorld.cs" />
+     <Compile Include="Assets\Inventory\InventoryScripts\Slot.cs" />
      <Compile Include="Assets\MySuperPlayable\MySuperPlayableBehaviour.cs" />
      <Compile Include="Assets\MySuperPlayable\MySuperPlayableClip.cs" />
      <Compile Include="Assets\MySuperPlayable\MySuperPlayableMixerBehaviour.cs" />

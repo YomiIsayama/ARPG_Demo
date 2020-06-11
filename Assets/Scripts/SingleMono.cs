@@ -8,37 +8,24 @@ namespace SingleInstance
     public class SingleMono<T> : MonoBehaviour
         where T : SingleMono<T>
     {
-        private const string ROOT_NAME = "SingleMono";
-        private static T _instance = null;
-
-        private static GameObject root
+        private static T _instance;
+        public static T GetIsntance()
         {
-            get
+            if (null == _instance)
             {
-                GameObject singleMono = GameObject.Find(ROOT_NAME);
-                if (singleMono == null)
+                _instance = FindObjectOfType(typeof(T)) as T;
+                if (null == _instance)
                 {
-                    singleMono = new GameObject(ROOT_NAME);
-                    DontDestroyOnLoad(singleMono);
+                    GameObject singleton = new GameObject("(SingleMono)" + typeof(T).ToString());
+                    _instance = singleton.AddComponent<T>();
+                    DontDestroyOnLoad(singleton);
                 }
-                return singleMono;
             }
-        }
+            return _instance;
 
-        public static T instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    GameObject gameObject = new GameObject(typeof(T).Name);
-                    gameObject.transform.SetParent(root.transform);
-                    _instance = gameObject.AddComponent<T>();
-                }
-                return _instance;
-            }
+
         }
     }
-
+        
 }
 

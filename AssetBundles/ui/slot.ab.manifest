@@ -1,0 +1,45 @@
+ManifestFileVersion: 0
+CRC: 940409313
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 960748ec35e98e89a1bcad5be90155a4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 97ca2cd1ee594a3f7f13233e0ff3eefc
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 37fe389c7ee6b514ca48f84f5299d385, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/Simple Fantasy GUI/PNG/Icons/Helmet_Icon.png
+- Assets/Simple Fantasy GUI/PNG/Icons/Armor_Icon.png
+- Assets/Simple Fantasy GUI/PNG/Icons/Shield_Icon.png
+- Assets/Inventory/Prefab/slot.prefab
+- Assets/Simple Fantasy GUI/PNG/Icons/Boots_Icon.png
+- Assets/Simple Fantasy GUI/PNG/Icons/Sword_Icon.png
+Dependencies: []
