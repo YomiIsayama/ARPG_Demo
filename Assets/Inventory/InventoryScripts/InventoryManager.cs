@@ -10,8 +10,13 @@ public class InventoryManager : SingleMono<InventoryManager>
     //public static InventoryManager instance;
     public Inventory itemBag;
     public GameObject slotGrid;
-    public Slot slotPrefab;
+    //public Slot slotPrefab;
+    public GameObject emptySlot;
+    private string emptySlotPath = "InventoryPrefab/slot";
     public Text itemInfomation;
+    public List<GameObject> slots = new List<GameObject>();
+
+
     void Update()
     {
     }
@@ -19,30 +24,43 @@ public class InventoryManager : SingleMono<InventoryManager>
     {
         slotGrid = GameObject.Find("Grid");
         itemInfomation = GameObject.Find("ItemDescription").GetComponent<Text>();
+        emptySlot = Resources.Load(emptySlotPath) as GameObject;
+        RefreshItem();
+        Instance().itemInfomation.text = "";
     }
 
-    public static void CreatNewItem(Item item)
+    public static void UpdateItemInfo(string itemDescription)
     {
-        Slot newItem = Instantiate(GetIsntance().slotPrefab, GetIsntance().slotGrid.transform);  
-        newItem.slotImage.sprite = item.itemImage;
-        newItem.slotNum.text = item.itemHeld.ToString();
-        Debug.Log(item.itemHeld.ToString());
+        Instance().itemInfomation.text = itemDescription;
+    }
+
+    //public static void CreatNewItem(Item item)
+    //{
+    //    Slot newItem = Instantiate(Instance().slotPrefab, Instance().slotGrid.transform);
+    //    newItem.slotItem = item;
+    //    newItem.slotImage.sprite = item.itemImage;
+    //    newItem.slotNum.text = item.itemHeld.ToString();
+    //    Debug.Log(item.itemHeld.ToString());
+
+    //}
+    public static void RefreshItem()
+    {
+        for (int i = 0; i< Instance().slotGrid.transform.childCount; i++)
+        {
+            if(Instance().slotGrid.transform.childCount == 0)
+            {
+                break;
+            }
+            Destroy(Instance().slotGrid.transform.GetChild(i).gameObject);
+            Instance().slots.Clear();
+        }
+        for(int i = 0; i < Instance().itemBag.itemList.Count; i++)
+        {
+            //CreatNewItem(Instance().itemBag.itemList[i]);
+            Instance().slots.Add(Instantiate(Instance().emptySlot,Instance().slotGrid.transform));
+            Instance().slots[i].GetComponent<Slot>().SetupSlot(Instance().itemBag.itemList[i]);
+        }
 
     }
 
-    //private IEnumerator LoadInventory()
-    //{
-    //    string uri = @"F:\unity\work\ARPG_Demo\AssetBundles\ui\slot.ab";
-    //    UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(uri);
-    //    yield return request.SendWebRequest();
-
-    //    AssetBundle ab = DownloadHandlerAssetBundle.GetContent(request);
-    //    //other way
-    //    //AssetBundle ab =( request.downloadHandler as DownloadHandlerAssetBundle).assetBundle
-
-    //    GameObject gameObj = ab.LoadAsset<GameObject>("slot.ab");
-    //    Instantiate(gameObj);
-    //    Debug.Log(gameObj.name);
-    //    yield return null;
-    //}
 }

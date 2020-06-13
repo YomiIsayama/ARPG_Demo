@@ -9,7 +9,7 @@ namespace SingleInstance
         where T : SingleMono<T>
     {
         private static T _instance;
-        public static T GetIsntance()
+        public static T Instance()
         {
             if (null == _instance)
             {
