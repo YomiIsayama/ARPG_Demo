@@ -58,6 +58,7 @@ public class InventoryManager : SingleMono<InventoryManager>
         {
             //CreatNewItem(Instance().itemBag.itemList[i]);
             Instance().slots.Add(Instantiate(Instance().emptySlot,Instance().slotGrid.transform));
+            Instance().slots[i].GetComponent<Slot>().slotID = i;
             Instance().slots[i].GetComponent<Slot>().SetupSlot(Instance().itemBag.itemList[i]);
         }
 
