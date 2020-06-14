@@ -32,6 +32,7 @@ namespace SingleInstance
         {
             _closeBtn();
             bag.SetActive(pi.isOpen);
+            InventoryManager.RefreshItem();
         }
         private void _closeBtn()
         {
