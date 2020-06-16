@@ -118,6 +118,7 @@ public class KeyboardInput : IUserInput
         if(Input.GetKeyDown(keyOpenBag))
         {
             isOpen = !isOpen;
+            InventoryManager.RefreshItem();
         }
     }
     private void inputAct()

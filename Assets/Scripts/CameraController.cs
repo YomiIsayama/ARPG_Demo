@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour
     public float verticalSpeed = 100.0f;
     public Image lockDot;
     public GameObject bag;
+    public GameObject EscPanel;
 
     public bool lockState;
     public bool isAI = false;
@@ -23,6 +24,12 @@ public class CameraController : MonoBehaviour
     private LockTarget lockTarget;
     private float tempEulerx;
 
+
+    void Awake()
+    {
+        EscPanel = GameObject.Find("Canvas/EscPanel");
+        bag = GameObject.Find("Canvas/Bag");
+    }
     // Start is called before the first frame update
     [System.Obsolete]
     void Start()
@@ -98,9 +105,11 @@ public class CameraController : MonoBehaviour
         if (!isAI)
         {
             //Hide mouse
-            if (bag.activeInHierarchy == true)
+            if (bag.activeInHierarchy == true || EscPanel.activeInHierarchy == true)
             {
                 Cursor.lockState = CursorLockMode.None;
+                pi.jup = 0;
+                pi.jright = 0;
             }
             else
             {

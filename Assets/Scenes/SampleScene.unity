@@ -793,6 +793,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemBag: {fileID: 11400000, guid: fc15e2819a061504ea69e49456dc17c5, type: 2}
+  Sword: {fileID: 11400000, guid: 5a7749234ab4f2645a19804600438dfb, type: 2}
+  Shoe: {fileID: 11400000, guid: 9c63fe18225af274c94ef0beef3c4e62, type: 2}
 --- !u!4 &1123721250
 Transform:
   m_ObjectHideFlags: 0
@@ -1498,12 +1500,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 238422866632308098}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1839681406 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 238422864793287420, guid: ebd63b0a48970554f984f444a95589ed,
-    type: 3}
-  m_PrefabInstance: {fileID: 238422866632308098}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1977440235 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4555219602559258876, guid: 249fda0a64ebb4242a88d297cf747c40,
@@ -1741,7 +1737,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bag
       value: 
-      objectReference: {fileID: 1839681406}
+      objectReference: {fileID: 0}
     - target: {fileID: 2440755710981257648, guid: 2fd84164d9576ce41a5add480de611ac,
         type: 3}
       propertyPath: m_LocalPosition.x

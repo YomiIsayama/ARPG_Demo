@@ -11,10 +11,12 @@ namespace SingleInstance
         private GameObject bag;
         private IUserInput pi;
         private Button closeBtn;
-        void Start()
+        private GameObject EscPanel;
+        void Awake()
         {
             pi = GameObject.FindGameObjectWithTag("Player").GetComponent<KeyboardInput>();
             bag = GameObject.FindGameObjectWithTag("Bag");
+            EscPanel = GameObject.Find("EscPanel");
             foreach (Transform T in bag.GetComponentInChildren<Transform>())
             {
                 if (T.name.CompareTo("CloseBtn")==0)
@@ -27,12 +29,12 @@ namespace SingleInstance
         void Update()
         {
             openMyBag();
+            openEscPanel();
         }
         private void openMyBag()
         {
             _closeBtn();
             bag.SetActive(pi.isOpen);
-            InventoryManager.RefreshItem();
         }
         private void _closeBtn()
         {
@@ -40,6 +42,10 @@ namespace SingleInstance
             {
                 pi.isOpen = false;
             });
+        }
+        private void openEscPanel()
+        {
+            EscPanel.SetActive(pi.esc);
         }
     }
 }

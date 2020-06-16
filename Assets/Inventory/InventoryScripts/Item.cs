@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,4 +18,9 @@ public class Item : ScriptableObject
         expendable
     }
     public itemType itype;
+
+    public static implicit operator List<object>(Item v)
+    {
+        throw new NotImplementedException();
+    }
 }

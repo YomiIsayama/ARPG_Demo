@@ -15,5 +15,7 @@ MonoBehaviour:
   itemName: Shoe
   itemImage: {fileID: 21300000, guid: b634c8a51d4a2d440b44719a9c1329ba, type: 3}
   itemHeld: 1
-  itemInfo: Shoe is this
+  itemInfo: 'shoe
+
+'
   itype: 1
