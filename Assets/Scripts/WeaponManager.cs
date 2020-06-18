@@ -12,6 +12,12 @@ public class WeaponManager : IActorManagerInterface
     public WeaponController wcL;
     public WeaponController wcR;
 
+    private GameObject attackEFX;
+
+    void Awake()
+    {
+        attackEFX = Resources.Load("Effect/FX_SwordSlash_01") as GameObject;
+    }
     void Start()
     {
         //weaponCol = whR.GetComponentInChildren<Collider>();
@@ -102,6 +108,8 @@ public class WeaponManager : IActorManagerInterface
             else
             {
                 weaponColR.enabled = true;
+                var atkEfx = Instantiate(attackEFX, transform.DeepFind("weaponHandleR"));
+                Destroy(atkEfx, 2.0f);
             }
         }
         catch (System.Exception)

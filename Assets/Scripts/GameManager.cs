@@ -20,6 +20,7 @@ namespace SingleInstance
 
         void Update()
 		{
+			//Time.timeScale = 0.1f;
 		}
 
 		//[System.Obsolete]

@@ -150,6 +150,7 @@
      <None Include="Assets\Suriyun\README.txt" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\CharaMain.cginc" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
+     <None Include="Assets\PolygonParticles\Materials\SHARED BY LUXURYPANDA.txt" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\readme.txt" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\CharaSkin.cginc" />
      <None Include="Assets\Suriyun\UnityChanShader\Shader\Unitychan_chara_eye.shader" />

@@ -34,6 +34,7 @@ public class ActorController : SingleMono<ActorController>
     private Vector3 deltaPos;
     private Vector3 deltaPosroll;
 
+
     void Awake()
     {
         anim = model.GetComponent<Animator>();
@@ -48,6 +49,7 @@ public class ActorController : SingleMono<ActorController>
                 break;
             }
         }
+
     }
 
     // Start is called before the first frame update

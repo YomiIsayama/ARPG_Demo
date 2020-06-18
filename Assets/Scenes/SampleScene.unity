@@ -793,8 +793,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemBag: {fileID: 11400000, guid: fc15e2819a061504ea69e49456dc17c5, type: 2}
-  Sword: {fileID: 11400000, guid: 5a7749234ab4f2645a19804600438dfb, type: 2}
-  Shoe: {fileID: 11400000, guid: 9c63fe18225af274c94ef0beef3c4e62, type: 2}
 --- !u!4 &1123721250
 Transform:
   m_ObjectHideFlags: 0
@@ -841,7 +839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1260760767
 MonoBehaviour:
   m_ObjectHideFlags: 0
