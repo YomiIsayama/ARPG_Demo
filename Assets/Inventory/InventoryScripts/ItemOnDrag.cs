@@ -10,7 +10,7 @@ public class ItemOnDrag : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragH
     private int currentItemID;
 
     public void OnBeginDrag(PointerEventData eventData)
-    {
+    {    
         orginalParent = this.transform.parent;
         currentItemID = orginalParent.GetComponent<Slot>().slotID;
         this.transform.SetParent(transform.parent.parent);

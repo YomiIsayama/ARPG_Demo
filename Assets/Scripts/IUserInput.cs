@@ -20,6 +20,7 @@ namespace SingleInstance
         [Header("===== ctrl signals =====")]
         public bool esc;
         public bool isOpen;
+        public bool lockMode;
 
         [Header("===== Others =====")]
         protected float targetDup;

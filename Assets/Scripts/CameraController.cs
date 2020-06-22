@@ -8,11 +8,12 @@ public class CameraController : MonoBehaviour
 {
     public IUserInput pi;
     //public Image lockDot;
-    public float horizontalSpeed = 100.0f;
-    public float verticalSpeed = 100.0f;
+    public float horizontalSpeed = 100f;
+    public float verticalSpeed = 100f;
     public Image lockDot;
     public GameObject bag;
     public GameObject EscPanel;
+    public GameObject commandsGroup;
 
     public bool lockState;
     public bool isAI = false;
@@ -29,6 +30,7 @@ public class CameraController : MonoBehaviour
     {
         EscPanel = GameObject.Find("Canvas/EscPanel");
         bag = GameObject.Find("Canvas/Bag");
+        commandsGroup = GameObject.Find("commandsGroup");
     }
     // Start is called before the first frame update
     [System.Obsolete]
@@ -61,7 +63,7 @@ public class CameraController : MonoBehaviour
             //CameraHandle.transform.Rotate(Vector3.right, pi.jup * (-verticalSpeed) * Time.deltaTime);
             //tempEulerx = CameraHandle.transform.eulerAngles.x;
             //控制镜头上下方向角度限制。
-            tempEulerx -= pi.jup * verticalSpeed * Time.fixedDeltaTime;
+            tempEulerx -= pi.jup * verticalSpeed*Time.fixedDeltaTime;
             tempEulerx = Mathf.Clamp(tempEulerx, -60, 60);
 
             CameraHandle.transform.localEulerAngles = new Vector3

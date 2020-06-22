@@ -22,6 +22,8 @@ public class KeyboardInput : IUserInput
     public string keyRT;
     public string keyEsc;
     public string keyOpenBag;
+    public string keyLockMode;
+
 
     [Header("===== Mouse settings =====")]
     public bool mouseEnable = false;
@@ -39,6 +41,7 @@ public class KeyboardInput : IUserInput
     {
         esc = false;
         isOpen = false;
+        lockMode = false;
     }
 
     // Update is called once per frame
@@ -50,7 +53,9 @@ public class KeyboardInput : IUserInput
         inputAct();
         inputEsc();
         inputOpenBag();
+        inputLockMode();
     }
+
 
     private void mouseInputUpdate()
     {
@@ -119,6 +124,13 @@ public class KeyboardInput : IUserInput
         {
             isOpen = !isOpen;
             InventoryManager.RefreshItem();
+        }
+    }
+    void inputLockMode()
+    {
+        if (Input.GetKeyDown(keyLockMode))
+        {
+            lockMode = !lockMode;
         }
     }
     private void inputAct()

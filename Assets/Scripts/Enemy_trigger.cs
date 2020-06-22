@@ -9,7 +9,7 @@ public class Enemy_trigger : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.transform.gameObject.tag == "Player")
+        if (col.transform.gameObject.tag == "PlayerModel")
         {
             is_trigger = true;
         }

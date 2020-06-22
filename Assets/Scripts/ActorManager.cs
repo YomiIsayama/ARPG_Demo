@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SingleInstance;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -15,10 +16,12 @@ public class ActorManager : MonoBehaviour
     public DirectorManage dm;
     public InteractionManager im;
 
+    public TargetManager targetManager;
 
     // Start is called before the first frame update
     void Awake()
     {
+        targetManager = GameObject.FindGameObjectWithTag("Player").GetComponent<TargetManager>();
         ac = GetComponent<ActorController>();
         GameObject model = ac.model;
         GameObject sensor = null;
@@ -217,6 +220,7 @@ public class ActorManager : MonoBehaviour
                 if (doHitAnimation)
                 {
                     Hit();
+                    targetManager.ModifyATB(25);
                 }
                 // do some vfx 
             }
