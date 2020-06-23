@@ -10,6 +10,7 @@ public class StateManager : IActorManagerInterface
     public float ATK = 10.0f;
     public Image uiHPBar;
     private GameObject PlayerHandle;
+    public GameObject Main_Camera;
 
 
     [Header("1st order state flags")] 
@@ -31,6 +32,10 @@ public class StateManager : IActorManagerInterface
     public bool isCounterBackSuccess;
     public bool isCounterBackFailure;
 
+    void Awake()
+    {
+        Main_Camera = GameObject.FindGameObjectWithTag("MainCamera");
+    }
 
     void Start()
     {
@@ -71,7 +76,7 @@ public class StateManager : IActorManagerInterface
         uiHPBar.fillAmount = HP / HPMax;
         if(am.ac.camcon.isAI)
         {
-            uiHPBar.transform.LookAt(Camera.main.transform);
+            uiHPBar.transform.LookAt(Main_Camera.transform);
         }
     }
 

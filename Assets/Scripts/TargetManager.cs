@@ -21,6 +21,8 @@ public class TargetManager : SingleMono<TargetManager>
     public Camera targetCam;
     public IUserInput pi;
     public Animator anim;
+    private StateManager stateManager;
+
 
     public List<Transform> targets;
     private Transform lookAtObj;
@@ -39,7 +41,8 @@ public class TargetManager : SingleMono<TargetManager>
     void Awake()
     {
         lookAtObj = GameObject.Find("LookAtObj").transform;
-        targetCam = GameObject.Find("targetCamera").GetComponent<Camera>();
+        stateManager = gameObject.GetComponent<StateManager>();
+        //targetCam = GameObject.Find("targetCamera").GetComponent<Camera>();
     }
     // Start is called before the first frame update
     void Start()
@@ -67,19 +70,18 @@ public class TargetManager : SingleMono<TargetManager>
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy")&& !targets.Contains(other.transform))
         {
             targets.Add(other.transform);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && targets.Contains(other.transform))
         {
-            if (targets.Contains(other.transform))
-                targets.Remove(other.transform);
+            targets.Remove(other.transform);
         }
     }
 
@@ -130,7 +132,8 @@ public class TargetManager : SingleMono<TargetManager>
             return;
 
         OnTargetSelectTrigger.Invoke(isCmeraLook);
-        targetCam.transform.LookAt(isCmeraLook ? lookAtObj : null);
+        stateManager.Main_Camera.GetComponent<Camera>().enabled = !isCmeraLook;
+        targetCam.transform.LookAt(isCmeraLook ? targets[targetIndex] : null);
         targetCam.gameObject.SetActive(isCmeraLook);
 
         isAiming = isCmeraLook;

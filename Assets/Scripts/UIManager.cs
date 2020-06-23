@@ -11,7 +11,8 @@ namespace SingleInstance
 {
     public class UIManager : SingleMono<UIManager>
     {
-        public TargetManager targetManager;
+        private TargetManager targetManager;
+        public CameraController camcon;
         private GameObject bag;
         private IUserInput pi;
         private Button closeBtn;
@@ -56,7 +57,7 @@ namespace SingleInstance
             openEscPanel();
             if (aimAtTarget)
             {
-                aimCanvas.transform.position = Camera.main.WorldToScreenPoint(targetManager.targets[targetManager.targetIndex].position + Vector3.up);
+                aimCanvas.transform.position = targetManager.targetCam.WorldToScreenPoint(targetManager.targets[targetManager.targetIndex].position + Vector3.up);
             }
         }
         private void openMyBag()
@@ -109,6 +110,7 @@ namespace SingleInstance
 
             aimAtTarget = on;
             aimCanvas.alpha = on ? 1 : 0;
+
 
             commandsGroup.gameObject.SetActive(!on);
             targetGroup.GetComponent<CanvasGroup>().DOFade(on ? 1 : 0, .1f).SetUpdate(true);

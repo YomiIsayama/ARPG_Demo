@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
+    private TargetManager targetManager;
     public IUserInput pi;
     //public Image lockDot;
     public float horizontalSpeed = 100f;
@@ -22,19 +23,11 @@ public class CameraController : MonoBehaviour
     private GameObject CameraHandle;
     private GameObject model;
     private GameObject camera;
-    private LockTarget lockTarget;
+    public LockTarget lockTarget;
     private float tempEulerx;
 
 
     void Awake()
-    {
-        EscPanel = GameObject.Find("Canvas/EscPanel");
-        bag = GameObject.Find("Canvas/Bag");
-        commandsGroup = GameObject.Find("commandsGroup");
-    }
-    // Start is called before the first frame update
-    [System.Obsolete]
-    void Start()
     {
         CameraHandle = transform.parent.gameObject;
         PlayerHandle = CameraHandle.transform.parent.gameObject;
@@ -43,6 +36,16 @@ public class CameraController : MonoBehaviour
         model = ac.model;
         pi = ac.pi;
         lockState = false;
+        targetManager = PlayerHandle.GetComponent<TargetManager>();
+        EscPanel = GameObject.Find("Canvas/EscPanel");
+        bag = GameObject.Find("Canvas/Bag");
+        commandsGroup = GameObject.Find("commandsGroup");
+    }
+    // Start is called before the first frame update
+    [System.Obsolete]
+    void Start()
+    {
+
         if (!isAI)
         {
             camera = Camera.main.gameObject;
@@ -86,7 +89,7 @@ public class CameraController : MonoBehaviour
             CameraHandle.transform.LookAt(lockTarget.obj.transform);
         }
 
-        if (!isAI)
+        if (!isAI && !targetManager.lockMode)
         {
             //camera 延迟追踪
             camera.transform.position = Vector3.Lerp(camera.transform.position, transform.position, 0.1f);
@@ -199,7 +202,7 @@ public class CameraController : MonoBehaviour
         //            lockTarget = null;
         //        }
     }   
-    private class LockTarget
+    public class LockTarget
     {
         public GameObject obj;
         public ActorManager am;
