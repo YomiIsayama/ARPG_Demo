@@ -180,6 +180,7 @@ public class TargetManager : SingleMono<TargetManager>
         StartCoroutine(AbilityCooldown());
 
         SetLockMode(false);
+        pi.lockMode = false;
 
         MoveTowardsTarget(targets[targetIndex]);
 
@@ -194,6 +195,7 @@ public class TargetManager : SingleMono<TargetManager>
         StartCoroutine(AbilityCooldown());
 
         SetLockMode(false);
+        pi.lockMode = false;
 
         //Animation
         anim.SetTrigger("hit");

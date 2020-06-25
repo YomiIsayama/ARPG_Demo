@@ -55,6 +55,7 @@ namespace SingleInstance
         {
             openMyBag();
             openEscPanel();
+            UpdateSlider();
             if (aimAtTarget)
             {
                 aimCanvas.transform.position = targetManager.targetCam.WorldToScreenPoint(targetManager.targets[targetManager.targetIndex].position + Vector3.up);
@@ -79,7 +80,7 @@ namespace SingleInstance
 
         public void UpdateSlider()
         {
-            atbSlider.fillAmount = targetManager.atbSlider / targetManager.filledAtbValue*2;
+            atbSlider.fillAmount = targetManager.atbSlider / (targetManager.filledAtbValue*2);
         }
 
         public void ShowTacticalMenu(bool isShow)
