@@ -229,27 +229,27 @@ PrefabInstance:
     - target: {fileID: 2528654059386143765, guid: 912d54409e35c2f4fa5670a0a723fb39,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2528654059386143765, guid: 912d54409e35c2f4fa5670a0a723fb39,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2528654059386143765, guid: 912d54409e35c2f4fa5670a0a723fb39,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2528654059386143765, guid: 912d54409e35c2f4fa5670a0a723fb39,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2528654059386143765, guid: 912d54409e35c2f4fa5670a0a723fb39,
         type: 3}
       propertyPath: m_text
-      value: Defense
+      value: SkillCombo1
       objectReference: {fileID: 0}
     - target: {fileID: 2528654059386143765, guid: 912d54409e35c2f4fa5670a0a723fb39,
         type: 3}
@@ -286,6 +286,11 @@ PrefabInstance:
       propertyPath: m_textAlignment
       value: 514
       objectReference: {fileID: 0}
+    - target: {fileID: 2528654059386143765, guid: 912d54409e35c2f4fa5670a0a723fb39,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4026452755142280384, guid: 912d54409e35c2f4fa5670a0a723fb39,
         type: 3}
       propertyPath: m_Sprite
@@ -315,7 +320,7 @@ PrefabInstance:
     - target: {fileID: 4990534742018280572, guid: 912d54409e35c2f4fa5670a0a723fb39,
         type: 3}
       propertyPath: m_Name
-      value: Defense
+      value: SkillCombo1
       objectReference: {fileID: 0}
     - target: {fileID: 5012395261581136231, guid: 912d54409e35c2f4fa5670a0a723fb39,
         type: 3}
@@ -520,8 +525,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1402648616}
-        m_MethodName: Heal
-        m_Mode: 1
+        m_MethodName: SetAimCamera
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -893,18 +898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Confirm:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1402648616}
-        m_MethodName: SpinAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   Select:
     m_PersistentCalls:
       m_Calls:
@@ -2041,18 +2035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Confirm:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1402648616}
-        m_MethodName: SpinAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   Select:
     m_PersistentCalls:
       m_Calls:
@@ -3029,7 +3012,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   Select:
     m_PersistentCalls:
@@ -3464,18 +3447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Confirm:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1402648616}
-        m_MethodName: SpinAttack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   Select:
     m_PersistentCalls:
       m_Calls:

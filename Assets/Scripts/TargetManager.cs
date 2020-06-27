@@ -11,6 +11,7 @@ using UnityEngine.Events;
 
 public class TargetManager : SingleMono<TargetManager>
 {
+
     [HideInInspector]
     public  GameEvent OnModificationATB;
     [HideInInspector]
@@ -138,6 +139,8 @@ public class TargetManager : SingleMono<TargetManager>
 
         isAiming = isCmeraLook;
 
+
+
     }
 
     private void CancelAction()
@@ -201,7 +204,21 @@ public class TargetManager : SingleMono<TargetManager>
         anim.SetTrigger("hit");
 
     }
+    public void SkillCombo1()
+    {
+        ModifyATB(-100);
 
+        StartCoroutine(AbilityCooldown());
+
+        SetLockMode(false);
+        pi.lockMode = false;
+
+        MoveTowardsTarget(targets[targetIndex]);
+
+        //Animation
+        anim.SetTrigger("skillCombo1");
+
+    }
     public void MoveTowardsTarget(Transform target)
     {
         if (Vector3.Distance(transform.position, target.position) > 1 && Vector3.Distance(transform.position, target.position) < 10)
