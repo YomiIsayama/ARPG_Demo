@@ -26,8 +26,12 @@ public class DummyIUserInput : IUserInput
     private bool wp2to3 = false;
     private bool wp3to1 = false;
 
+    private StateManager stateManager;
 
-
+    void Awake()
+    {
+        stateManager = this.GetComponent<StateManager>();
+    }
     void Start()
     {
         curState = FSMstate.Patrol;
@@ -48,6 +52,12 @@ public class DummyIUserInput : IUserInput
             case FSMstate.Attack:
                 StateAttack();
                 break;
+        }
+        if (stateManager.HP <= 0)
+        {
+            inputEnabled = false;
+            curState = FSMstate.None;
+            Destroy(this.gameObject, 5.0f);
         }
 
     }

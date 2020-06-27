@@ -115,6 +115,7 @@ public class CameraController : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 pi.jup = 0;
                 pi.jright = 0;
+                pi.inputEnabled = false;
             }
             else
             {
