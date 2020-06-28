@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System;
 using UnityEngine.EventSystems;
+using TMPro;
 
 namespace SingleInstance 
 {
@@ -24,8 +25,12 @@ namespace SingleInstance
         public Transform targetGroup;
         public Image atbSlider;
 
+        public static GameObject skillCombo1;
+        public static GameObject spinAttack;
+
         public CanvasGroup aimCanvas;
         public bool aimAtTarget;
+
 
         void Awake()
         {
@@ -41,6 +46,9 @@ namespace SingleInstance
                 }
 
             }
+
+            skillCombo1 = GameObject.Find("SkillCombo1");
+            spinAttack = GameObject.Find("SpinAttack");
         }
 
         void Start()
@@ -125,7 +133,7 @@ namespace SingleInstance
                     {
                         targetGroup.GetChild(i).GetComponent<CanvasGroup>().alpha = 1;
                         targetGroup.GetChild(i).GetComponent<CanvasGroup>().interactable = true;
-                        //targetGroup.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = TargetManager.targets[i].name;
+                        targetGroup.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = targetManager.targets[i].name;
                     }
                     else
                     {

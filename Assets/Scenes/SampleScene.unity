@@ -5110,6 +5110,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1402648616, guid: 2fd84164d9576ce41a5add480de611ac, type: 3}
+      propertyPath: atbCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402648616, guid: 2fd84164d9576ce41a5add480de611ac, type: 3}
+      propertyPath: atbSlider
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 2065320774, guid: 2fd84164d9576ce41a5add480de611ac, type: 3}
       propertyPath: m_IsActive
       value: 0

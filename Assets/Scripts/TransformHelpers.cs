@@ -5,7 +5,7 @@ using UnityEngine;
 public static class TransformHelpers
 {
     //深度搜索
-    //deepfind 查找 model 的 部件
+    //deepfind 查找
     public static Transform DeepFind(this Transform parent, string targetName)
     {
         Transform tempTrans = null;

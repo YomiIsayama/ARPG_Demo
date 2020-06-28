@@ -27,10 +27,12 @@ public class DummyIUserInput : IUserInput
     private bool wp3to1 = false;
 
     private StateManager stateManager;
+    private TargetManager targetManager;
 
     void Awake()
     {
         stateManager = this.GetComponent<StateManager>();
+        targetManager = this.GetComponent<TargetManager>();
     }
     void Start()
     {

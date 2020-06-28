@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
-
+using System;
 
 [System.Serializable] public class GameEvent : UnityEvent { }
 [System.Serializable] public class LockModeEvent : UnityEvent<bool> { }
@@ -30,6 +30,12 @@ public class TargetManager : SingleMono<TargetManager>
 
     public bool lockMode = false;
     public bool usingSkill = false;
+
+    internal UnityAction SetAimCamera()
+    {
+        throw new NotImplementedException();
+    }
+
     private bool isAiming = false;
 
     public int targetIndex;
@@ -73,6 +79,14 @@ public class TargetManager : SingleMono<TargetManager>
 
     private void OnTriggerStay(Collider other)
     {
+        foreach (Transform i in targets)
+        {
+            if (i == null)
+            {
+                targets.Remove(i);
+            }
+        }
+
         if (other.CompareTag("Enemy")&& !targets.Contains(other.transform))
         {
             targets.Add(other.transform);
@@ -85,7 +99,6 @@ public class TargetManager : SingleMono<TargetManager>
             targets.Remove(other.transform);
         }
     }
-
     private int NearestTargetToCenter()
     {
         float[] distances = new float[targets.Count];
@@ -124,7 +137,7 @@ public class TargetManager : SingleMono<TargetManager>
     public void SelectTarget(int index)
     {
         targetIndex = index;
-        lookAtObj.DOLookAt(targets[targetIndex].position, .3f).SetUpdate(true);
+        targetCam.transform.DOLookAt(targets[targetIndex].position, .3f).SetUpdate(true);
     }
     public void SetAimCamera(bool isCmeraLook)
     {
@@ -225,6 +238,7 @@ public class TargetManager : SingleMono<TargetManager>
         {
             StartCoroutine(DashCooldown());
             transform.DOMove(TargetOffset(), .5f);
+            transform.LookAt(targets[targetIndex]); 
             transform.DOLookAt(targets[targetIndex].position, .2f);
         }
     }
