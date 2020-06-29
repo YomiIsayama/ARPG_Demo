@@ -231,7 +231,6 @@ public class DirectorManage : IActorManagerInterface
                         MySuperPlayableBehaviour mybehav = myclip.template;
                         myclip.am.exposedName = System.Guid.NewGuid().ToString();
                         pd.SetReferenceValue(myclip.am.exposedName, victim);
-
                     }
                 }
                 else if (track.name == "Player Animation")
@@ -242,7 +241,6 @@ public class DirectorManage : IActorManagerInterface
                 {
                     pd.SetGenericBinding(track, victim.ac.anim);
                 }
-
             }
             pd.Evaluate();
             pd.Play();

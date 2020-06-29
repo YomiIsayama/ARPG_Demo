@@ -231,6 +231,7 @@ public class TargetManager : SingleMono<TargetManager>
         //Animation
         anim.SetTrigger("skillCombo1");
 
+
     }
     public void MoveTowardsTarget(Transform target)
     {

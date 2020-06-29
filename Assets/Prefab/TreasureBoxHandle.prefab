@@ -195,6 +195,7 @@ MonoBehaviour:
   sm: {fileID: 0}
   dm: {fileID: 0}
   im: {fileID: 0}
+  targetManager: {fileID: 0}
 --- !u!114 &1914316749241041513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +239,9 @@ MonoBehaviour:
   Dmag: 0
   Dvec: {x: 0, y: 0, z: 0}
   cmrfov: 0
+  esc: 0
+  isOpen: 0
+  lockMode: 0
   inputEnabled: 1
   run: 0
   onRun: 0
@@ -270,6 +274,7 @@ MonoBehaviour:
   HPMax: 15
   ATK: 10
   uiHPBar: {fileID: 0}
+  Main_Camera: {fileID: 0}
   isGround: 0
   isJump: 0
   isFall: 0

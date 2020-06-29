@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2309998841331593791}
   m_Layer: 11
   m_Name: EnemyHandle_Ybot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,6 +192,7 @@ MonoBehaviour:
   sm: {fileID: 0}
   dm: {fileID: 0}
   im: {fileID: 0}
+  targetManager: {fileID: 0}
 --- !u!320 &1594245439002076754
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -245,6 +246,7 @@ MonoBehaviour:
   HPMax: 100
   ATK: 10
   uiHPBar: {fileID: 2309998841328636668}
+  Main_Camera: {fileID: 0}
   isGround: 0
   isJump: 0
   isFall: 0
@@ -292,6 +294,9 @@ MonoBehaviour:
   Dmag: 0
   Dvec: {x: 0, y: 0, z: 0}
   cmrfov: 0
+  esc: 0
+  isOpen: 0
+  lockMode: 0
   inputEnabled: 1
   run: 0
   onRun: 0
@@ -382,6 +387,9 @@ MonoBehaviour:
   horizontalSpeed: 100
   verticalSpeed: 100
   lockDot: {fileID: 0}
+  bag: {fileID: 0}
+  EscPanel: {fileID: 0}
+  commandsGroup: {fileID: 0}
   lockState: 0
   isAI: 1
 --- !u!1 &1594245439570401287
