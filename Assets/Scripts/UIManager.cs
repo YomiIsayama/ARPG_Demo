@@ -18,6 +18,7 @@ namespace SingleInstance
         private IUserInput pi;
         private Button closeBtn;
         private GameObject EscPanel;
+        private GameObject npcTip;
 
         public CanvasGroup tacticalMenu;
         public CanvasGroup attackMenu;
@@ -49,6 +50,8 @@ namespace SingleInstance
 
             skillCombo1 = GameObject.Find("SkillCombo1");
             spinAttack = GameObject.Find("SpinAttack");
+
+            npcTip = GameObject.Find("NPCTip");
         }
 
         void Start()
@@ -68,6 +71,8 @@ namespace SingleInstance
             {
                 aimCanvas.transform.position = targetManager.targetCam.WorldToScreenPoint(targetManager.targets[targetManager.targetIndex].position + Vector3.up);
             }
+
+            npcTip.transform.LookAt(Camera.main.transform);
         }
         private void openMyBag()
         {

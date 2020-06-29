@@ -116,6 +116,7 @@
      <Compile Include="Assets\Scripts\FSMOnEnter.cs" />
      <Compile Include="Assets\Scripts\FSMOnExit.cs" />
      <Compile Include="Assets\Scripts\FSMOnUpdate.cs" />
+     <Compile Include="Assets\Scripts\FungusSetting.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GameSaveManager.cs" />
      <Compile Include="Assets\Scripts\IActorManagerInterface.cs" />
@@ -241,6 +242,9 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>F:/unity/work/ARPG_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -782,6 +786,32 @@
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Fungus.FungusLuaEditor.csproj">
+      <Project>{309A745E-7338-94D8-1B41-F8989F30632E}</Project>
+      <Name>Fungus.FungusLuaEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FungusEditor.csproj">
+      <Project>{C15D9607-3D93-1AAF-5767-E438E3C7AD4C}</Project>
+      <Name>FungusEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fungus.LineEndingsEditor.csproj">
+      <Project>{F46DA794-947E-76CA-60C8-5D6EE62B0AE2}</Project>
+      <Name>Fungus.LineEndingsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FungusExamples.csproj">
+      <Project>{94992480-AF12-4DA7-46AE-6C93DD1EAE5B}</Project>
+      <Name>FungusExamples</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fungus.csproj">
+      <Project>{F0A0DDB2-FDE6-8A55-53F6-ACE1D1EF7F76}</Project>
+      <Name>Fungus</Name>
+    </ProjectReference>
+    <ProjectReference Include="Fungus.UsfxrEditor.csproj">
+      <Project>{10E15190-532C-ABAE-566B-F89F226CE50B}</Project>
+      <Name>Fungus.UsfxrEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

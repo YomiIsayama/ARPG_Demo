@@ -9,6 +9,8 @@ TagManager:
   - Bag
   - Enemy
   - PlayerModel
+  - Laser
+  - NPC
   layers:
   - Default
   - TransparentFX

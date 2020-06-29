@@ -110,7 +110,7 @@ public class CameraController : MonoBehaviour
         if (!isAI)
         {
             //Hide mouse
-            if (bag.activeInHierarchy == true || EscPanel.activeInHierarchy == true)
+            if (bag.activeInHierarchy == true || EscPanel.activeInHierarchy == true || FungusSetting.mouseOn == true)
             {
                 Cursor.lockState = CursorLockMode.None;
                 pi.jup = 0;

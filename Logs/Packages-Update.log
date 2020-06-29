@@ -43,3 +43,13 @@ The following packages were added:
   com.unity.textmeshpro@2.0.1
   com.unity.timeline@1.2.12
   com.unity.ugui@1.0.0
+
+=== Mon Jun 29 10:30:41 2020
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.2d.sprite@1.0.0
+  com.unity.ext.nunit@1.0.0
+  com.unity.package-manager-ui@2.2.0
