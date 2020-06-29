@@ -1,4 +1,8 @@
-# 游戏数值分析及程序实现部分
+## 游戏叙述
+1. Only some parts of gameplay of ARPG
+1. 该项目部分代码为早期初学编写，所以有少部分代码显得耦合度较高，部分代码使用了单例的泛型，却没有实质使用。暂时没有修改，请注意。
+
+## 游戏数值分析及程序实现部分
 
 
 ### a) 人物管理ActorManager
@@ -50,8 +54,6 @@
 1. UI相关主要使用asset store 中的 Simple Health Bar，Simple Fantasy GUI，SimpleDungeons等包。
 
 
-## 游戏叙述
-1. Only some parts of gameplay of ARPG
 ## 游戏的玩法介绍
 1. WASD ：上下左右；
 1. Left shift ：切换奔跑/行走 状态；
