@@ -64,13 +64,14 @@ public class TargetManager : SingleMono<TargetManager>
         {
             targetIndex = NearestTargetToCenter();
             lookAtObj.transform.LookAt(targets[targetIndex]);
+            if (pi.lockMode)
+            {
+                if (atbCount > 0 && !lockMode)
+                    SetLockMode(true);
+            }
         }
 
-        if(pi.lockMode && !usingSkill)
-        {
-            if (atbCount > 0 && !lockMode)
-                SetLockMode(true);
-        }
+
         if (!pi.lockMode)
         {
             CancelAction();

@@ -116,10 +116,12 @@ public class CameraController : MonoBehaviour
                 pi.jup = 0;
                 pi.jright = 0;
                 pi.inputEnabled = false;
+                pi.actEnable = false;
             }
             else
             {
                 Cursor.lockState = CursorLockMode.Locked;
+                pi.actEnable = true;
             }
         }
         if (lockTarget != null)

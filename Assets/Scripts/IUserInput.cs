@@ -48,6 +48,7 @@ namespace SingleInstance
         protected bool lastroll;
         public bool jab;
         protected bool lastjab;
+        public bool actEnable = true;
 
         protected Vector2 SquareToCircle(Vector2 input)
         {
