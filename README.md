@@ -72,3 +72,9 @@
 1. 在战术模式中，会自动锁定一定范围内的敌人，手动选择，切换目标，进行攻击/技能/回血
 
 
+![演示1](https://gitee.com/YomiIsayama/Images/raw/master/act.gif "演示1")
+![演示2](https://gitee.com/YomiIsayama/Images/raw/master/act2.gif "演示2")
+![演示3](https://gitee.com/YomiIsayama/Images/raw/master/act3.gif "演示3")
+![演示4](https://gitee.com/YomiIsayama/Images/raw/master/act4.gif "演示4")
+![背包保存](https://gitee.com/YomiIsayama/Images/raw/master/bagandsave.gif "背包保存")
+![对话](https://gitee.com/YomiIsayama/Images/raw/master/dialogue.gif "对话")
