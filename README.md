@@ -43,7 +43,7 @@
 1. Timeline配合使用 DefaultPlayables，处理timeline操作事件所需功能；
 ### h)	开源使用
 1. FF7RE战术模式参考 https://github.com/mixandjam/FFVII-TacticalMode
-1. 参考大佬的开源代码，并融入自己开发中使用。在UIManager ，TargetManager，ButtonEvent中做出了较多的修改。
+1. 参考大佬代码中TacticalModeScript.cs相关，使用战术模式相关代码，并融入自己开发原有的角色控制逻辑。在UIManager ，TargetManager，ButtonEvent中做出了较多的修改。
 1. 我修改了ButtonEvent与UI中的逻辑代码，通过代码控制检测选着哪个skill而选择目标，作出正确的反馈，日后可以随意修改，并添加任意skill方法到TargetManager；
 1. 修改了战术模式内targetCam与main camera的问题；
 1. 修改了targets[targetIndex]在敌人死亡后 miss的问题；
